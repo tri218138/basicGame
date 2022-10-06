@@ -1,4 +1,33 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    background-image: url('./elements/mirinda-vi-soda-kem-viet-quat-moi-chua-ngot-beo-thom-ban-da-thu-202206020751378467.jpg');
+    background-size: 50%;
+}
+
+.score{
+    display: block;
+    width: max-content;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* float: right; */
+    right: 2em;
+}
+
+.score-content{
+    color: purple;
+    font-size: 50px;
+    font-weight: bold;   
+    background-color: white;
+    border: 10px solid purple;
+}
+
+.score-name{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;   
+    background-color: purple;
+    border: 10px solid purple;
 }
