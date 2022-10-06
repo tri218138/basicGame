@@ -51,9 +51,11 @@ function update() {
     const dd = new Date();
     let current_time = dd.getTime();
 
-    document.getElementById('remain_time').innerHTML = timeTotal - Math.round((current_time - start_time) / 1000);
+    let remain_time = timeTotal - Math.round((current_time - start_time) / 1000);
+    if (remain_time < 0) return;
+    document.getElementById('remain_time').innerHTML = remain_time;
     document.getElementById('score_food').innerHTML = snakeBody.length;
-    context.fillStyle="black";
+    context.fillStyle="#C6A9D4";
     context.fillRect(0, 0, board.width, board.height);
     
     // context.fillStyle="red";
@@ -77,7 +79,7 @@ function update() {
         snakeBody[0] = [snakeX, snakeY];
     }
 
-    context.fillStyle="lime";
+    context.fillStyle= "purple";
     snakeX += velocityX * blockSize;
     snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
