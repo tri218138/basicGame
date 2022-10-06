@@ -9,6 +9,13 @@
     </head>
 
     <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="./elements/Mirinda.mov" type="video/mov">
+            Your browser does not support HTML5 video.
+        </video>
+        <audio controls autoplay loop style="display:none;">
+            <source src="./elements/TaiNhacHay.Biz - Chuyện Cũ Bỏ Qua.mp3" type="audio/mpeg">
+        </audio>
         <h1 id="title-game">Snake Game</h1>
         <div class="score">
             <div class="score-name">Thời gian</div>
@@ -21,7 +28,12 @@
             </div>            
         </div>   
         <div id="board_border">
-            <canvas id="board"></canvas>       
-        </div>  
+            <canvas id="board"></canvas>
+            <button type="button" id="rule_intro" onclick="guide_to_play()">Let's go!</button>      
+            <div id="wheelOfFortune" style="display:none;">
+                <canvas id="wheel" width="500" height="500"></canvas>
+                <div id="spin">SPIN asd asd asd as dasd as dasd asd asd as d</div>
+            </div>  
+        </div>          
     </body>
 </html>

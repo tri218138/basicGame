@@ -1,7 +1,6 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    
     background-image: url('./elements/mirinda-vi-soda-kem-viet-quat-moi-chua-ngot-beo-thom-ban-da-thu-202206020751378467.jpg');
     background-size: 50%;
 }
@@ -11,6 +10,14 @@ body {
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 #board_border{
@@ -51,3 +58,73 @@ body {
     background-color: purple;
     border: 10px solid purple;
 }
+
+
+#rule_intro{
+    position: absolute;
+    display: flex;
+    /* justify-self:end; */
+    align-self: end;
+    background-color: purple;
+    color: white;
+    font-size: 25px;    
+    margin: 20px;
+}
+#rule_intro:hover{
+    position: absolute;
+    display: flex;
+    /* justify-self:end; */
+    align-self: end;
+    background-color: purple;
+    color: yellow;
+    font-size: 25px;  
+    margin: 20px;
+}
+
+#arrow_key{
+    opacity: 50%;
+}
+
+/* wheel of fortune */
+
+#wheelOfFortune {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    /* justify-content:center;
+    align-items:center; */
+    justify-self: center;
+    align-self: center;
+}
+
+#wheel {
+display: block;
+}
+#spin {
+    font: 1.5rem/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+}
+
+#spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
